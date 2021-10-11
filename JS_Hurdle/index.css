@@ -1,0 +1,7 @@
+.Row { border: 1px solid #c9c9c9; text-align: center; background: #c9c9c9; }
+
+.Row > #canvas { background: #fff; }
+
+.btn { border: 1px solid skyblue; color: skyblue; padding: 5px; background: #fff; }
+
+.btn:hover { color: #fff; background: skyblue; }

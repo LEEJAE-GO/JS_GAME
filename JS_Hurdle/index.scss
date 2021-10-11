@@ -1,0 +1,25 @@
+$border: 1px solid;
+$gray: #c9c9c9;
+$center: center;
+$white: #fff;
+$skyblue: skyblue;
+
+.Row {
+  border: $border $gray;
+  text-align: $center;
+  background: $gray;
+  > #canvas {
+    background: $white;
+  }
+}
+
+.btn {
+  border: $border $skyblue;
+  color: $skyblue;
+  padding: 5px;
+  background: $white;
+  &:hover {
+    color: $white;
+    background: $skyblue;
+  }
+}
