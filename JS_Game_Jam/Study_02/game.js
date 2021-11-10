@@ -1,18 +1,24 @@
-var canvas = document.getElementById("canvas_id");
-var back = document.getElementById("gameRound");
-var canvas_2d = canvas.getContext("2d");
+const canvas = document.getElementById("canvas_id");
+const back = document.getElementById("gameRound");
+const canvas_2d = canvas.getContext("2d");
 
-var back_width = back.scrollWidth;
-var back_height = back.scrollHeight;
+let object_time;
+let timer = 0;
+const frame = 60; //컴퓨터 디스플레이 프레임 수에 맞게 변경
 
-let object_time = 5000;
-var timer = 0;
-var frame = 60;
-
-canvas.width = back_width;
-canvas.height = back_height;
+canvas.width = back.scrollWidth;
+canvas.height = back.scrollHeight;
 
 canvas_2d.fillStyle = "red";
+
+
+const UserImg = new Image();
+UserImg.src = "4gak.png";
+let x = 425;
+let y = 225;
+UserImg.onload = function (){
+  canvas_2d.drawImage(UserImg, x, y,50,50);
+}
 
 function randnCreate(){
   var locate_x = (Math.random()*850).toFixed(2);
@@ -34,13 +40,13 @@ function timestemp(){
   }
 } // 게임 플레이 시간 생성
 
-function createOJ(){
+function createOJ(object_time){
   setInterval(function(){randnCreate()},object_time);  
 } // 5초마다 생성
 
 
-createOJ();
-
+createOJ(5000);
+User();
 
 timestemp();
 
